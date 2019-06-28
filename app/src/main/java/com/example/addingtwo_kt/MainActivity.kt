@@ -21,12 +21,13 @@ class MainActivity : AppCompatActivity() {
                 tv.text = ""
                 Toast.makeText(this, "Invalid Input",LENGTH_SHORT).show()
             }
+            else
+            {
+                var firstNum = etFirstNum.text.toString().toInt()
+                var secondNum = etSecondNum.text.toString().toInt()
 
-            var firstNum = etFirstNum.text.toString().toInt()
-            var secondNum = etSecondNum.text.toString().toInt()
-
-            tv.text = firstNum.toString() + " + " + secondNum.toString() + " = " + (firstNum + secondNum).toString()
-
+                tv.text = firstNum.toString() + " + " + secondNum.toString() + " = " + (firstNum + secondNum).toString()
+            }
         }
 
         btnReset.setOnClickListener {
